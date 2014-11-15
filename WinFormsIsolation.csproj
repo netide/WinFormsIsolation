@@ -70,6 +70,9 @@
     </Compile>
     <Compile Include="Demo\IsolationDemo.cs" />
     <Compile Include="Demo\IsolationDomain.cs" />
+    <Compile Include="Demo\ShortcutTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

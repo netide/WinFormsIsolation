@@ -41,6 +41,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.demoToolStripHost1 = new WinFormsIsolation.Demo.DemoToolStripHost();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.shortcutTextBox1 = new WinFormsIsolation.Demo.ShortcutTextBox();
             this.toolStrip1.SuspendLayout();
             this.controlMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -96,9 +98,9 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(128, 6);
+            this.textBox1.Location = new System.Drawing.Point(133, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 20);
+            this.textBox1.Size = new System.Drawing.Size(254, 20);
             this.textBox1.TabIndex = 1;
             // 
             // label1
@@ -114,9 +116,9 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(128, 32);
+            this.textBox2.Location = new System.Drawing.Point(133, 32);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 20);
+            this.textBox2.Size = new System.Drawing.Size(254, 20);
             this.textBox2.TabIndex = 3;
             // 
             // label2
@@ -152,6 +154,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.shortcutTextBox1);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
@@ -161,6 +165,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(390, 220);
             this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Textbox that takes input:";
+            // 
+            // shortcutTextBox1
+            // 
+            this.shortcutTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.shortcutTextBox1.Location = new System.Drawing.Point(133, 58);
+            this.shortcutTextBox1.Name = "shortcutTextBox1";
+            this.shortcutTextBox1.Size = new System.Drawing.Size(254, 20);
+            this.shortcutTextBox1.TabIndex = 5;
             // 
             // DemoControl
             // 
@@ -198,6 +220,8 @@
         private System.Windows.Forms.Panel panel1;
         private DemoToolStripHost demoToolStripHost1;
         private System.Windows.Forms.Panel panel2;
+        private ShortcutTextBox shortcutTextBox1;
+        private System.Windows.Forms.Label label3;
 
     }
 }
