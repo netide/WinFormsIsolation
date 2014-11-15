@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -161,6 +162,22 @@ namespace WinFormsIsolation.Isolation
                 {
                     _select--;
                 }
+            }
+            catch (Exception ex)
+            {
+                return ErrorUtil.GetHResult(ex);
+            }
+        }
+
+        int IIsolationClient.GetPreferredSize(Size proposedSize, out Size preferredSize)
+        {
+            preferredSize = new Size();
+
+            try
+            {
+                preferredSize = GetPreferredSize(proposedSize);
+
+                return 0;
             }
             catch (Exception ex)
             {

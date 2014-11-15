@@ -130,13 +130,14 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.Controls.Add(this.demoToolStripHost1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(12);
-            this.panel1.Size = new System.Drawing.Size(390, 72);
+            this.panel1.Size = new System.Drawing.Size(390, 24);
             this.panel1.TabIndex = 4;
             // 
             // demoToolStripHost1
@@ -145,7 +146,7 @@
             this.demoToolStripHost1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.demoToolStripHost1.Location = new System.Drawing.Point(12, 12);
             this.demoToolStripHost1.Name = "demoToolStripHost1";
-            this.demoToolStripHost1.Size = new System.Drawing.Size(366, 48);
+            this.demoToolStripHost1.Size = new System.Drawing.Size(366, 0);
             this.demoToolStripHost1.TabIndex = 0;
             this.demoToolStripHost1.Text = "demoToolStripHost1";
             // 
@@ -156,9 +157,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 121);
+            this.panel2.Location = new System.Drawing.Point(0, 73);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(390, 172);
+            this.panel2.Size = new System.Drawing.Size(390, 220);
             this.panel2.TabIndex = 1;
             // 
             // DemoControl

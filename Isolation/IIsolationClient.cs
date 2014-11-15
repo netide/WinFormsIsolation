@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -17,5 +18,7 @@ namespace WinFormsIsolation.Isolation
         int ProcessMnemonic(char charCode);
 
         int SelectNextControl(bool forward);
+
+        int GetPreferredSize(Size proposedSize, out Size preferredSize);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -192,6 +193,14 @@ namespace WinFormsIsolation.Isolation
             {
                 _select--;
             }
+        }
+
+        public override Size GetPreferredSize(Size proposedSize)
+        {
+            Size preferredSize;
+            ErrorUtil.ThrowOnFailure(_client.GetPreferredSize(proposedSize, out preferredSize));
+
+            return preferredSize;
         }
 
         int IIsolationHost.ProcessCmdKey(ref NiMessage message, Keys keyData)
