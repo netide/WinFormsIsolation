@@ -41,8 +41,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.demoToolStripHost1 = new WinFormsIsolation.Demo.DemoToolStripHost();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.shortcutTextBox1 = new WinFormsIsolation.Demo.ShortcutTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.controlMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -166,15 +166,6 @@
             this.panel2.Size = new System.Drawing.Size(390, 220);
             this.panel2.TabIndex = 1;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Textbox that takes input:";
-            // 
             // shortcutTextBox1
             // 
             this.shortcutTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -183,6 +174,15 @@
             this.shortcutTextBox1.Name = "shortcutTextBox1";
             this.shortcutTextBox1.Size = new System.Drawing.Size(254, 20);
             this.shortcutTextBox1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Textbox that takes input:";
             // 
             // DemoControl
             // 

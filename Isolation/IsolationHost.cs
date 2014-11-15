@@ -105,6 +105,8 @@ namespace WinFormsIsolation.Isolation
             SetChildHwnd(_client.Handle);
 
             OnWindowCreated(EventArgs.Empty);
+
+            SetBoundsCore(0, 0, Width, Height, BoundsSpecified.Size);
         }
 
         protected override void OnHandleDestroyed(EventArgs e)
@@ -193,6 +195,19 @@ namespace WinFormsIsolation.Isolation
             {
                 _select--;
             }
+        }
+
+        protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
+        {
+            if (_client != null && (specified & BoundsSpecified.Size) != 0)
+            {
+                var size = GetPreferredSize(new Size(width, height));
+
+                width = size.Width;
+                height = size.Height;
+            }
+
+            base.SetBoundsCore(x, y, width, height, specified);
         }
 
         public override Size GetPreferredSize(Size proposedSize)
