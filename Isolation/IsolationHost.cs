@@ -55,6 +55,7 @@ namespace WinFormsIsolation.Isolation
         private void ParentChild()
         {
             NativeMethods.SetParent(new HandleRef(this, _childHwnd), new HandleRef(this, Handle));
+
             PerformLayout();
         }
 
@@ -115,34 +116,6 @@ namespace WinFormsIsolation.Isolation
                 _client.Dispose();
                 _client = null;
             }
-        }
-
-        public override bool PreProcessMessage(ref Message msg)
-        {
-            if (_client != null)
-            {
-                NiMessage message = msg;
-                bool result = ErrorUtil.ThrowOnFailure(_client.PreFilterMessage(ref message));
-                msg = message;
-            }
-
-            return base.PreProcessMessage(ref msg);
-        }
-
-        protected override bool IsInputKey(Keys keyData)
-        {
-            if (_client != null)
-                return ErrorUtil.ThrowOnFailure(_client.IsInputKey(keyData));
-
-            return base.IsInputKey(keyData);
-        }
-
-        protected override bool IsInputChar(char charCode)
-        {
-            if (_client != null)
-                return ErrorUtil.ThrowOnFailure(_client.IsInputChar(charCode));
-
-            return base.IsInputChar(charCode);
         }
 
         private class Sponsor : MarshalByRefObject, ISponsor

@@ -6,10 +6,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WinFormsIsolation.Isolation;
 
 namespace WinFormsIsolation.Demo
 {
-    public partial class DemoControl : UserControl
+    public partial class DemoControl : IsolationClient
     {
         public DemoControl(IsolationDemo originalDomain)
         {

@@ -79,7 +79,9 @@
     <Compile Include="Isolation\ControlUtil.cs" />
     <Compile Include="Isolation\ErrorUtil.cs" />
     <Compile Include="Isolation\IIsolationClient.cs" />
-    <Compile Include="Isolation\IsolationClient.cs" />
+    <Compile Include="Isolation\IsolationClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Isolation\IsolationHost.cs">
       <SubType>Component</SubType>
     </Compile>

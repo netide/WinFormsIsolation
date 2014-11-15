@@ -23,12 +23,12 @@ namespace WinFormsIsolation.Demo
 
         public IIsolationClient CreateClient(IsolationDemo originalDomain)
         {
-            return new IsolationClient { Client = new DemoControl(originalDomain) };
+            return new DemoControl(originalDomain);
         }
 
         public IIsolationClient CreateToolStrip()
         {
-            return new IsolationClient { Client = new DemoToolStrip() };
+            return new DemoToolStrip();
         }
     }
 }
