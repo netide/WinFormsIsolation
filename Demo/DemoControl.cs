@@ -18,5 +18,15 @@ namespace WinFormsIsolation.Demo
 
             demoToolStripHost1.OriginalDemo = originalDomain;
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, "Exit in the demo control");
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, "Tool strip button in the demo control");
+        }
     }
 }

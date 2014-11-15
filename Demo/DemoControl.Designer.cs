@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoControl));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.controlMenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hostedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.demoToolStripHost1 = new WinFormsIsolation.Demo.DemoToolStripHost();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.controlMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(390, 25);
-            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
@@ -63,17 +63,18 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(104, 22);
-            this.toolStripButton1.Text = "&Hosted button";
+            this.toolStripButton1.Text = "Ho&sted button";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // menuStrip1
+            // controlMenuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.controlMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hostedToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(390, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.controlMenuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.controlMenuStrip1.Name = "controlMenuStrip1";
+            this.controlMenuStrip1.Size = new System.Drawing.Size(390, 24);
+            this.controlMenuStrip1.TabIndex = 0;
+            this.controlMenuStrip1.Text = "controlMenuStrip1";
             // 
             // hostedToolStripMenuItem
             // 
@@ -89,6 +90,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -143,7 +145,6 @@
             this.demoToolStripHost1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.demoToolStripHost1.Location = new System.Drawing.Point(12, 12);
             this.demoToolStripHost1.Name = "demoToolStripHost1";
-            this.demoToolStripHost1.OriginalDemo = null;
             this.demoToolStripHost1.Size = new System.Drawing.Size(366, 48);
             this.demoToolStripHost1.TabIndex = 0;
             this.demoToolStripHost1.Text = "demoToolStripHost1";
@@ -167,13 +168,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.controlMenuStrip1);
             this.Name = "DemoControl";
             this.Size = new System.Drawing.Size(390, 293);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.controlMenuStrip1.ResumeLayout(false);
+            this.controlMenuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -186,7 +187,7 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip controlMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hostedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;

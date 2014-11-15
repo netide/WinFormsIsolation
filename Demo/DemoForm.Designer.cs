@@ -33,16 +33,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.demoHost1 = new WinFormsIsolation.Demo.DemoControlHost();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.formMenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.demoHost1 = new WinFormsIsolation.Demo.DemoControlHost();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.formMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,16 @@
             this.panel1.Size = new System.Drawing.Size(468, 241);
             this.panel1.TabIndex = 3;
             // 
+            // demoHost1
+            // 
+            this.demoHost1.BackColor = System.Drawing.SystemColors.Control;
+            this.demoHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.demoHost1.Location = new System.Drawing.Point(12, 12);
+            this.demoHost1.Name = "demoHost1";
+            this.demoHost1.Size = new System.Drawing.Size(444, 217);
+            this.demoHost1.TabIndex = 0;
+            this.demoHost1.Text = "demoHost1";
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -105,15 +115,15 @@
             this.textBox2.Size = new System.Drawing.Size(359, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // menuStrip1
+            // formMenuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(492, 24);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
+            this.formMenuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.formMenuStrip1.Name = "formMenuStrip1";
+            this.formMenuStrip1.Size = new System.Drawing.Size(492, 24);
+            this.formMenuStrip1.TabIndex = 6;
+            this.formMenuStrip1.Text = "formMenuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -127,7 +137,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -148,16 +158,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
             this.toolStripButton1.Text = "Host &button";
-            // 
-            // demoHost1
-            // 
-            this.demoHost1.BackColor = System.Drawing.SystemColors.Control;
-            this.demoHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.demoHost1.Location = new System.Drawing.Point(12, 12);
-            this.demoHost1.Name = "demoHost1";
-            this.demoHost1.Size = new System.Drawing.Size(444, 217);
-            this.demoHost1.TabIndex = 0;
-            this.demoHost1.Text = "demoHost1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // DemoForm
             // 
@@ -171,13 +172,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.formMenuStrip1);
+            this.MainMenuStrip = this.formMenuStrip1;
             this.Name = "DemoForm";
             this.Text = "DemoForm";
             this.panel1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.formMenuStrip1.ResumeLayout(false);
+            this.formMenuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -193,7 +194,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip formMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;

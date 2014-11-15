@@ -21,5 +21,10 @@ namespace WinFormsIsolation.Demo
         {
             return toolStrip1.GetPreferredSize(proposedSize);
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, "Nested button");
+        }
     }
 }

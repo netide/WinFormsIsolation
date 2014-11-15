@@ -79,6 +79,7 @@
     <Compile Include="Isolation\ControlUtil.cs" />
     <Compile Include="Isolation\ErrorUtil.cs" />
     <Compile Include="Isolation\IIsolationClient.cs" />
+    <Compile Include="Isolation\IIsolationHost.cs" />
     <Compile Include="Isolation\IsolationClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +88,9 @@
     </Compile>
     <Compile Include="Isolation\NativeMethods.cs" />
     <Compile Include="Isolation\NiMessage.cs" />
+    <Compile Include="Isolation\PreProcessMessageResult.cs" />
+    <Compile Include="Isolation\Sponsor.cs" />
+    <Compile Include="Isolation\Stubs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Demo\DemoControl.resx">

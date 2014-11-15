@@ -56,6 +56,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(103, 22);
             this.toolStripButton1.Text = "&Nested button";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -72,19 +73,19 @@
             // option1ToolStripMenuItem
             // 
             this.option1ToolStripMenuItem.Name = "option1ToolStripMenuItem";
-            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.option1ToolStripMenuItem.Text = "Option 1";
             // 
             // option2ToolStripMenuItem
             // 
             this.option2ToolStripMenuItem.Name = "option2ToolStripMenuItem";
-            this.option2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.option2ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.option2ToolStripMenuItem.Text = "Option 2";
             // 
             // option3ToolStripMenuItem
             // 
             this.option3ToolStripMenuItem.Name = "option3ToolStripMenuItem";
-            this.option3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.option3ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.option3ToolStripMenuItem.Text = "Option 3";
             // 
             // DemoToolStrip

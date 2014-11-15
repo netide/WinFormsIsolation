@@ -20,7 +20,12 @@ namespace WinFormsIsolation.Demo
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            MessageBox.Show(this, "Exit on the form");
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, "Host tool strip button");
         }
     }
 }
